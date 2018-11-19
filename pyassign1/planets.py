@@ -19,11 +19,11 @@ earth=turtle.Turtle()
 mars=turtle.Turtle()
 jupiter=turtle.Turtle()
 saturn=turtle.Turtle()
-"""preparations before the planets run
-    """
 
 
 def preparation(t,color,distance,size):
+	"""preparations before the planets run
+    """
 	t.shape('circle')
 	t.color(color)
 	t.speed(0)
@@ -31,10 +31,11 @@ def preparation(t,color,distance,size):
 	t.up()
 	t.forward(distance) 
 	t.down()
-"""preparations before the planets run
-    """
+
 
 def run():
+	"""let the planets run
+    """
 	for i in range (1,100000):
 		a_=[19.35,36.17,55,76.18,260,479]
 		a=a_[i%6]
@@ -47,9 +48,10 @@ def run():
 		an=angle[i%6]*i
 		pl.goto(a*math.cos(math.radians(an))+a*e,b*math.sin(math.radians(an)))
 
-"""let the planets run
-    """
+
 def main():
+	"""preparations and run
+    """
 	preparation(sun,'red',0,1)
 	preparation(mercury,'blue',23.33,0.25)
 	preparation(venus,'yellow',36.41,0.75)
@@ -58,7 +60,6 @@ def main():
 	preparation(jupiter,'coral',272.71,2.5)
 	preparation(saturn,'brown',506.2,2)
 	run()
-"""preparations and run
-    """
+
 if __name__ == '__main__':
     main()
