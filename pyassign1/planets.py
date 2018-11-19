@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Foobar.py: Description of what foobar does.
+"""Planets.py: 模拟太阳六大行星轨道运动
 
 __author__ = "Zhangyinuo"
 __pkuid__  = "1800011770"
