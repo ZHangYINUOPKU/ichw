@@ -28,7 +28,7 @@ def test1():
 	assert  exchange('USD','EUR',2.5) == list1[2]
 
 def test2():
-'''对于输入内容的测试'''
+'''对于输入合法性测试'''
 	from urllib.request import urlopen
 	doc = urlopen('http://cs1110.cs.cornell.edu/2016fa/a1server.php?from='+a+'&to='+b+'&amt='+c)
 	docstr = doc.read()
@@ -40,11 +40,12 @@ def test2():
 	else:
 		assert True 
 
-a=input("输入货币源：")
-b=input("输入要转变的货币：")
-c=str(input("输入货币源的金额："))
+
 def main():
-'''先进行结果测试保证函数准确性，而后输入，在根据输入结果确定是否进一步执行exchange函数，最后执行exchange函数'''
+'''先进行结果测试保证函数准确性，而后判断输入合法性，而后根据输入结果确定是否进一步执行exchange函数，最后执行exchange函数'''
+	a=input("输入货币源：")
+	b=input("输入要转变的货币：")
+	c=str(input("输入货币源的金额："))
 	test1()
 	test2()
 	print(exchange(a,b,c))
