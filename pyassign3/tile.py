@@ -17,8 +17,8 @@ def determine(x, wall, a, b, m, n):
 def pu(x, m, a, b, wall, way):
     """铺上一块砖
     """
-    wy = way
-    wl = wall
+    wy = [t for t in way]
+    wl = [h for h in wall]
     tup = []
     for i in range(a):
         for j in range(b):
